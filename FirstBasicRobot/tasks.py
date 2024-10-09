@@ -15,6 +15,7 @@ def robotExportToPDF():
     descargarExcel()
     rellenarConDatosExel()
     recolectarResultados()
+    logOut()
 
 def abrirIntranet():
     """Navegar a la intranet de la empresa."""
@@ -57,3 +58,8 @@ def recolectarResultados():
     """Hacer una captura de pantalla de la pagina."""
     page = browser.page()
     page.screenshot(path="output/resultadosVentas.png")
+    
+def logOut():
+    """Cerrar sesión en la intranet."""
+    page = browser.page()
+    page.click("text=Log out")
