@@ -1,3 +1,4 @@
+Siguiendo el curso introductorio https://sema4.ai/docs/automation/courses/beginners-course-python
 # Introducción
 
 Robot Framework es un marco de automatización de pruebas de código abierto. Se destaca su simplicidad y extensibilidad, lo que lo hace adecuado para una amplia gama de aplicaciones.
@@ -14,7 +15,7 @@ Robot Framework es un marco de automatización de pruebas de código abierto. Se
 
 # Cosas a tener en cuenta (borrador)
 
-## Navegador
+### Navegador
 * Se pueden abrir y realiar acciones en navegador importando browser
 * Para acceder a una url: `browser.goto("url")`
 * Puedes usar get sobre la browser para guardar la pagina como variable usando `browser.page()`
