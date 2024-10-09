@@ -22,4 +22,7 @@ Robot Framework es un marco de automatización de pruebas de código abierto. Se
 * Con la pagina como variable se puede usar `page.fill("#idElemento", "textoParaLlenar")` para llenar los campos del formulario
 * Puedes enviar el formulario con `page.click("button:text('textoBoton'))` o `page.click("text=textoBoton)`
 * Se puede elegir el valor de un dropdown usando `page.select_option("#idDropdown", "valor")`
+
+### Trabajar con archivos
 * Para descargar archivos de una pagina utilizaremos `RPA.HTTP`
+* Se pueden leer archivos de excel con `RPA.Excel.Files` y la funcion `excel.read_worksheet_as_table(header=True)` nos devolvera una tabla a la que podremos acceder a cada fila e identificar los elementos de cada colimna por el header
