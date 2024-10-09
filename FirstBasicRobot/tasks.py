@@ -8,12 +8,13 @@ from RPA.Excel.Files import Files
 def robotExportToPDF():
     """Insertar los datos de ventas por semana y exportar como PDF."""
     browser.configure(
-        slowmo=1000,
+        slowmo=100,
     )
     abrirIntranet()
     logIn()
     descargarExcel()
     rellenarConDatosExel()
+    recolectarResultados()
 
 def abrirIntranet():
     """Navegar a la intranet de la empresa."""
@@ -51,3 +52,8 @@ def rellenarConDatosExel():
         enviarFormularioVentas(row["First Name"], row["Last Name"], row["Sales"], row["Sales Target"])
         
     excel.close_workbook()
+    
+def recolectarResultados():
+    """Hacer una captura de pantalla de la pagina."""
+    page = browser.page()
+    page.screenshot(path="output/resultadosVentas.png")
