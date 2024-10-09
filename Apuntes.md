@@ -37,3 +37,8 @@ Robot Framework es un marco de automatización de pruebas de código abierto. Se
 
 Siguiendo el curso intermedio: https://sema4.ai/docs/automation/courses/build-a-robot-python
 
+### Trabajar con archivos
+* Se puede usar el metodo `archive_folder_with_zip("rutaArchivo", "rutaComprimido")` de la clase `Archive`de la libreria `RPA.Archive``
+* Se pueden adjuntar fotos a archivos PDF con `add_files_to_pdf(files: list, target_document", append=True)`
+
+-- Esta parte ha sido mas para hacer las cosas sin andar de la mano de la guia como tal no hay nada muy nuevo
