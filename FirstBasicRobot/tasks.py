@@ -3,6 +3,7 @@ from robocorp import browser
 
 from RPA.HTTP import HTTP
 from RPA.Excel.Files import Files
+from RPA.PDF import PDF
 
 @task
 def robotExportToPDF():
@@ -15,6 +16,7 @@ def robotExportToPDF():
     descargarExcel()
     rellenarConDatosExel()
     recolectarResultados()
+    exportarPDF()
     logOut()
 
 def abrirIntranet():
@@ -63,3 +65,10 @@ def logOut():
     """Cerrar sesión en la intranet."""
     page = browser.page()
     page.click("text=Log out")
+    
+def exportarPDF():
+    """Exportar los datos como PDF."""
+    page = browser.page()
+    htmlResultadoVentas = page.locator("#sales-results").inner_html()
+    pdf = PDF()
+    pdf.html_to_pdf(htmlResultadoVentas, "output/resultadosVentas.pdf")
