@@ -8,7 +8,16 @@ def robotExportToPDF():
         slowmo=1000,
     )
     abrirIntranet()
+    logIn()
 
 def abrirIntranet():
     """Navegar a la intranet de la empresa."""
     browser.goto("https://robotsparebinindustries.com/")
+    
+def logIn():
+    """Iniciar sesión en la intranet."""
+    page = browser.page()
+    page.fill("#username", "maria")
+    page.fill("#password", "thoushallnotpass")
+    page.click("button:text('Log in')")
+    
