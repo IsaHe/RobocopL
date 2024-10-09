@@ -42,3 +42,14 @@ Siguiendo el curso intermedio: https://sema4.ai/docs/automation/courses/build-a-
 * Se pueden adjuntar fotos a archivos PDF con `add_files_to_pdf(files: list, target_document", append=True)`
 
 -- Esta parte ha sido mas para hacer las cosas sin andar de la mano de la guia como tal no hay nada muy nuevo
+
+------------Hasta aqui el curso de intermedio------------
+
+### Esquema productor-consumidor
+* El robot tiene que hacer 2 tareas basicas: producir y consumir
+* Para tener un mayor control sobre las tareas ejecutadas por nuestro robot, modificamos `robot.yaml`, donde cambiamos la parte de `tasks`por:
+- tasks:
+    Produce data:
+        shell: python -m robocorp.tasks run tasks.py -t producirDatosDeTrafico
+    Consume data:
+        shell: python -m robocorp.tasks run tasks.py -t consumirDatosTrafico
