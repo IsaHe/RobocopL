@@ -19,5 +19,6 @@ Robot Framework es un marco de automatización de pruebas de código abierto. Se
 * Se pueden abrir y realiar acciones en navegador importando browser
 * Para acceder a una url: `browser.goto("url")`
 * Puedes usar get sobre la browser para guardar la pagina como variable usando `browser.page()`
-* Con la pagina como variable se puede usar `page.fill("idElemento", "textoParaLlenar")` para llenar los campos del formulario
-* Puedes enviar el formulario con `page.click("button:text('textoBoton'))`
+* Con la pagina como variable se puede usar `page.fill("#idElemento", "textoParaLlenar")` para llenar los campos del formulario
+* Puedes enviar el formulario con `page.click("button:text('textoBoton'))` o `page.click("text=textoBoton)`
+* Se puede elegir el valor de un dropdown usando `page.select_option("#idDropdown", "valor")`

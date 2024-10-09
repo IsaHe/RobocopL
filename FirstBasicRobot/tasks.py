@@ -5,10 +5,11 @@ from robocorp import browser
 def robotExportToPDF():
     """Insertar los datos de ventas por semana y exportar como PDF."""
     browser.configure(
-        slowmo=1000,
+        slowmo=2000,
     )
     abrirIntranet()
     logIn()
+    enviarFormularioVentas()
 
 def abrirIntranet():
     """Navegar a la intranet de la empresa."""
@@ -21,3 +22,12 @@ def logIn():
     page.fill("#password", "thoushallnotpass")
     page.click("button:text('Log in')")
     
+def enviarFormularioVentas():
+    """Rellenar y enviar formulario de ventas."""
+    page = browser.page()
+    
+    page.fill("#firstname", "John")
+    page.fill("#lastname", "Doe")
+    page.fill("#salesresult", "100")
+    page.select_option("#salestarget", "10000")
+    page.click("text=Submit")
