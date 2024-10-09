@@ -1,6 +1,8 @@
 from robocorp.tasks import task
 from robocorp import browser
 
+from RPA.HTTP import HTTP
+
 @task
 def robotExportToPDF():
     """Insertar los datos de ventas por semana y exportar como PDF."""
@@ -9,6 +11,7 @@ def robotExportToPDF():
     )
     abrirIntranet()
     logIn()
+    descargarExcel()
     enviarFormularioVentas()
 
 def abrirIntranet():
@@ -31,3 +34,8 @@ def enviarFormularioVentas():
     page.fill("#salesresult", "100")
     page.select_option("#salestarget", "10000")
     page.click("text=Submit")
+    
+def descargarExcel():
+    """Descargar un archivo excel dada una URL."""
+    http = HTTP()
+    http.download("https://robotsparebinindustries.com/SalesData.xlsx", overwrite=True)
