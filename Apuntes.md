@@ -1,4 +1,4 @@
-Siguiendo el curso introductorio https://sema4.ai/docs/automation/courses/beginners-course-python
+Siguiendo el curso introductorio: https://sema4.ai/docs/automation/courses/beginners-course-python
 Librerias utiles para automatizacion https://sema4.ai/docs/automation/libraries
 
 # Introducción
@@ -32,3 +32,8 @@ Robot Framework es un marco de automatización de pruebas de código abierto. Se
 * Para descargar archivos de una pagina utilizaremos `RPA.HTTP`
 * Se pueden leer archivos de excel con `RPA.Excel.Files` y la funcion `excel.read_worksheet_as_table(header=True)` nos devolvera una tabla a la que podremos acceder a cada fila e identificar los elementos de cada colimna por el header
 * Se puede convertir de html a un pdf utilizando el metodo `html_to_pdf(html, "ruta/nombreArchivo.pdf")` de la clase `PDF`de la libreria `RPA.PDF`
+
+------------Hasta aqui el curso de principiante------------
+
+Siguiendo el curso intermedio: https://sema4.ai/docs/automation/courses/build-a-robot-python
+
